@@ -15,6 +15,7 @@
 #include "G4UnitsTable.hh"
 #include "G4PhysicalConstants.hh"
 #include "G4SystemOfUnits.hh"
+#include "G4Gamma.hh"
 
 SensitiveDetector::SensitiveDetector(const G4String& name,
                                      const G4String& hitsCollectionName) :
@@ -47,12 +48,29 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
     const G4String particleName = particle->GetParticleName();
     const G4int pdgID = particle->GetPDGEncoding();
     G4cout << "Particle: " << std::setw(10) << particleName << G4endl;
+    G4double energyTrack = track->GetKineticEnergy();
     
     //Geting process name that the particle underwent
     G4String processName = ((aStep->GetPostStepPoint())->GetProcessDefinedStep())->GetProcessName();
     
     //Getting particle ID
     //G4int particleID = track->GetTrackID();
+    
+    // Detecting fluorescence
+    G4int fPhotoGamma = G4PhysicsModelCatalog::GetIndex("phot_fluo");
+    G4int fComptGamma = G4PhysicsModelCatalog::GetIndex("compt_fluo");
+    G4int idx = track->GetCreatorModelID();
+    if (track->GetDefinition() == G4Gamma::Gamma()) {
+	    G4cout << "Gamma track!\n";
+	    if(idx == fPhotoGamma || idx == fComptGamma) {
+	      G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
+	      G4cout << "Fluorescence occurred!\n";
+	      RootAnalysis* rootAnalysis = RootAnalysis::Instance();
+              rootAnalysis->Write(energyTrack);
+	    }
+    
+  }  
+    
     
     //Energy deposit
     G4double energy = aStep->GetTotalEnergyDeposit();
@@ -82,26 +100,17 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
                 secondaryPosition = (*secondary)[i]->GetPosition();
                 momentumDirection = (*secondary)[i]->GetMomentumDirection();
 
-                G4cout << std::setw(10) << G4BestUnit(kinEnergy,"Energy") << G4endl;
+                G4cout << "Electron energy: " << std::setw(10) << G4BestUnit(kinEnergy,"Energy") << G4endl;
 
                 RootAnalysis* rootAnalysis = RootAnalysis::Instance();
                 rootAnalysis->Write(kinEnergy, secondaryPosition, momentumDirection);
             }
             if(secondaryName == "gamma"){
-            	G4cout << "COMPTON SCATTERING OCCURRED!" << G4endl;
+            	//G4cout << "COMPTON SCATTERING OCCURRED!" << G4endl;
             }
         }
     }
-    //Getting the secondary electron information
-    if(particleName=="e-" && number_secondaries !=0){
-    	for (int i=0; i<number_secondaries; i++) {
-	    	const G4ParticleDefinition* secondaryDefinition = (*secondary)[i]->GetParticleDefinition();
-		G4String secondaryName = secondaryDefinition->GetParticleName();
-	    	if(secondaryName == "gamma"){
-		    G4cout << "ATOMIC DEEXCITATION FLUORESCENCE OCCURRED!" << G4endl;
-		}
-	}
-    }
+    
     
 
     //Storing the hit (interation) information of the current step

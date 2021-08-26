@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=pGarfield100Entries
+#SBATCH --job-name=subm100
 #SBATCH --ntasks=1
 #SBATCH --nodes=1
 #SBATCH --time=01:00:00

@@ -323,6 +323,8 @@ G4PhysicalConstants.hh
 /home/christian/Documents/Simulação/Thgem_Fe55_X-ray/interactionDensity/src/G4PhysicalConstants.hh
 G4SystemOfUnits.hh
 /home/christian/Documents/Simulação/Thgem_Fe55_X-ray/interactionDensity/src/G4SystemOfUnits.hh
+G4Gamma.hh
+/home/christian/Documents/Simulação/Thgem_Fe55_X-ray/interactionDensity/src/G4Gamma.hh
 
 /home/christian/Documents/Simulação/Thgem_Fe55_X-ray/interactionDensity/src/UserDetectorConstruction.cc
 UserDetectorConstruction.hh

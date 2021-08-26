@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --output=ArCO2_70-30_1mT_20cm_2GeV_%A.%a.out
-#SBATCH --job-name=pArCO2
+#SBATCH --output=ArCO2_70-30_5.9+-0.05keV_%A.%a.out
+#SBATCH --job-name=ArCO2
 #SBATCH --ntasks=1
 #SBATCH --nodes=1
 #SBATCH --time=14-00:00:00

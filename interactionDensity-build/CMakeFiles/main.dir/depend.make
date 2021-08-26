@@ -2470,6 +2470,7 @@ CMakeFiles/main.dir/src/SensitiveDetector.cc.o: /home/christian/Programas/Geant4
 CMakeFiles/main.dir/src/SensitiveDetector.cc.o: /home/christian/Programas/Geant4/geant4.10.05.p01-install/include/Geant4/G4GRSSolid.icc
 CMakeFiles/main.dir/src/SensitiveDetector.cc.o: /home/christian/Programas/Geant4/geant4.10.05.p01-install/include/Geant4/G4GRSVolume.hh
 CMakeFiles/main.dir/src/SensitiveDetector.cc.o: /home/christian/Programas/Geant4/geant4.10.05.p01-install/include/Geant4/G4GRSVolume.icc
+CMakeFiles/main.dir/src/SensitiveDetector.cc.o: /home/christian/Programas/Geant4/geant4.10.05.p01-install/include/Geant4/G4Gamma.hh
 CMakeFiles/main.dir/src/SensitiveDetector.cc.o: /home/christian/Programas/Geant4/geant4.10.05.p01-install/include/Geant4/G4GeomSplitter.hh
 CMakeFiles/main.dir/src/SensitiveDetector.cc.o: /home/christian/Programas/Geant4/geant4.10.05.p01-install/include/Geant4/G4H1ToolsManager.hh
 CMakeFiles/main.dir/src/SensitiveDetector.cc.o: /home/christian/Programas/Geant4/geant4.10.05.p01-install/include/Geant4/G4H2ToolsManager.hh

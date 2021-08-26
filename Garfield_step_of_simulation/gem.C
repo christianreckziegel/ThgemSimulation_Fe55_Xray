@@ -34,8 +34,8 @@ int main(int argc, char * argv[]) {
 
   int index = int(atoi(argv[1]));
   std::string strIndex = std::string(argv[1]);
-  int iniAvalanche = index*100;
-  int maxAvalanche = iniAvalanche+100;
+  int iniAvalanche = index*20;
+  int maxAvalanche = iniAvalanche+20;
 
   //int monoEnergy = int(atoi(argv[2]));
   //std::string strEnergy = std::string(argv[2]);
@@ -140,20 +140,14 @@ int main(int argc, char * argv[]) {
   for (int i = iniAvalanche; i < maxAvalanche; i++) {
     theTree->GetEntry(i);
     
-    //checking block:
-    /* 
-    x = +-0.025cm
-    y = +-0.0866025cm
-    z = +-0.526cm*/
     xi=electron.x;
     yi=electron.y;
     zi=electron.z;
 
     x0=electron.x;
     y0=electron.y;
-    ei = 0.;
-    //ei = electron.energy;
-    //ei=monoEnergy*1000.0; //monoEnergy in eV
+    //ei = 0.;
+    ei = electron.energy;
     
     aval->AvalancheElectron(xi, yi, zi, 0., ei, electron.dx, electron.dy, electron.dz);
     std::cout << "X coordinate: " << xi << std::endl;
@@ -161,6 +155,8 @@ int main(int argc, char * argv[]) {
     std::cout << "Z coordinate: " << zi << std::endl;
     std::cout << "Avalanche number " << i+1 << " is done." << std::endl;
     np=aval->GetNumberOfElectronEndpoints();
+    std::cout << "Energy: " << ei << "eV\n";
+    std::cout << "There were " << np << " electron endpoints.\n";
     for (int j=0; j<np; j++){
         aval->GetElectronEndpoint(j, xi, yi, zi, ti, ei, x1, y1, z1, t1, e1, status);
         readout_x->Fill(x1);

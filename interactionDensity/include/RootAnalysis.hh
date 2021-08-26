@@ -23,6 +23,7 @@ public:
   virtual ~RootAnalysis();
   
   static RootAnalysis* Instance();
+  void Write(G4double gammaEnergy);
   void Write(G4double kinEnergy, G4ThreeVector position, G4ThreeVector momentum);
   void Close();
 
@@ -31,9 +32,11 @@ protected:
   
 private:
   TTree* fTTree;
+  TTree* fluorTTree;
   TFile* fFile;
   int fNevents;
   PARTICLE electron;
+  G4double fluorEnergy;
   
 };
 #endif
