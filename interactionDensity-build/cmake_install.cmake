@@ -1,4 +1,4 @@
-# Install script for directory: /home/christian/Documents/Simulação/Publication_Lucas/interactionDensity
+# Install script for directory: /home/christian/Documents/Simulação/Thgem_Fe55_X-ray/interactionDensity
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/main"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/christian/Documents/Simulação/Publication_Lucas/interactionDensity-build/main")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/christian/Documents/Simulação/Thgem_Fe55_X-ray/interactionDensity-build/main")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/main" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/main")
     file(RPATH_CHANGE
@@ -65,5 +65,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/christian/Documents/Simulação/Publication_Lucas/interactionDensity-build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/christian/Documents/Simulação/Thgem_Fe55_X-ray/interactionDensity-build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

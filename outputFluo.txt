@@ -1,0 +1,2959 @@
+### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+          DefaultRegionForTheWorld  1  0  0
+### ===  Ignore cuts flag:   0
+
+compt:  for gamma SubType=13 BuildTable=1
+      Lambda table from 100 eV  to 1 MeV, 7 bins/decade, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 56 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          PenCompton : Emin=    0 eV  Emax=  100 TeV Fluo
+
+phot:  for gamma SubType=12 BuildTable=0
+      LambdaPrime table from 200 keV to 100 TeV in 61 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        PenPhotoElec : Emin=    0 eV  Emax=  100 TeV Fluo
+
+Rayl:  for gamma SubType=11 BuildTable=1
+      Lambda table from 100 eV  to 100 keV, 7 bins/decade, spline: 0
+      LambdaPrime table from 100 keV to 100 TeV in 63 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+         PenRayleigh : Emin=    0 eV  Emax=    1 GeV
+
+eIoni:  for e-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.1, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             PenIoni : Emin=    0 eV  Emax=    1 GeV
+        MollerBhabha : Emin=    1 GeV Emax=  100 TeV
+      Subcutoff sampling in 1 regions
+
+eBrem:  for e-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             PenBrem : Emin=    0 eV  Emax=    1 GeV
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+msc:  for e-  SubType= 10
+      RangeFactor= 0.04, stepLimType: 1, latDisp: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   8.95879 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  121.26 eV     Position in x: -1.47235 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 460.692 eV     Position in x: -1.47235 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 3.95532 keV    Position in x: -1.47235 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 173.134 eV     Position in x: -1.47235 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.72067 keV    Position in x: -1.47235 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 351.795 eV     Position in x: -1.47235 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 629.695 eV     Position in x: -1.47235 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 667.485 eV     Position in x: -1.47235 cm 
+Event 0 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   113.885 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: 2.46699 mm 
+Particle:      gamma
+   7.06822 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: 2.45368 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:   10.09 eV     Position in x: 2.45368 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 920.162 eV     Position in x: 2.45369 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 298.131 eV     Position in x: 2.45371 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 389.189 eV     Position in x: 2.45371 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 3.37612 keV    Position in x:  2.4537 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.36256 keV    Position in x: 2.45371 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 255.813 eV     Position in x: 2.45369 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 456.152 eV     Position in x: 2.45368 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 113.885 eV     Position in x: 2.46699 mm 
+Event 1 end!
+
+Particle:      gamma
+Particle:      gamma
+    5.7545 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  3.1776 keV    Position in x: -1.21985 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 709.478 eV     Position in x: -1.21832 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.43318 keV    Position in x: -1.22863 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.37473 keV    Position in x: -1.22498 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.23712 keV    Position in x: -1.22184 cm 
+Event 2 end!
+
+Particle:      gamma
+Particle:      gamma
+   5.77846 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  3.1776 keV    Position in x: 1.09067 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 189.263 eV     Position in x: 1.14171 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 521.569 eV     Position in x: 1.23093 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 412.952 eV     Position in x: 1.23229 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 721.893 eV     Position in x: 1.24293 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.06737 keV    Position in x: 1.25759 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 529.555 eV     Position in x: 1.22836 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 810.488 eV     Position in x: 1.14069 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.52536 keV    Position in x: 1.16485 mm 
+Event 3 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   7.85803 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: -1.14055 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 419.608 eV     Position in x: -1.14055 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 218.641 eV     Position in x: -1.14056 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.62615 keV    Position in x: -1.14056 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 901.893 eV     Position in x: -1.14055 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  278.76 eV     Position in x: -1.14056 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.29605 keV    Position in x: -1.14056 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 252.383 eV     Position in x: -1.14056 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 353.524 eV     Position in x: -1.14057 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 789.081 eV     Position in x: -1.14057 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 413.532 eV     Position in x: -1.14057 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 308.407 eV     Position in x: -1.14056 mm 
+Event 4 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   49.6186 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: -3.01614 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 49.6186 eV     Position in x: -3.01614 mm 
+Event 5 end!
+
+Event 6 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   173.391 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  958.53 eV     Position in x: 9.80409 mm 
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   6.89857 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: 1.40429 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 278.038 eV     Position in x: 1.40429 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 99.4719 eV     Position in x: 1.40429 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 3.85885 keV    Position in x: 1.40429 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 855.181 eV     Position in x: 1.40429 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.36449 keV    Position in x: 1.40429 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 442.543 eV     Position in x: 1.40429 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 173.391 eV     Position in x: 9.80409 mm 
+Event 7 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   9.12466 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: -1.36539 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 9.12466 eV     Position in x: -1.36539 cm 
+Event 8 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   8.39469 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  537.28 eV     Position in x: -5.62484 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 211.397 eV     Position in x: -5.62495 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.65095 keV    Position in x: -5.62539 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  711.97 eV     Position in x: -5.62542 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 745.132 eV     Position in x: -5.62544 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:   721.3 eV     Position in x: -5.62542 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 690.601 eV     Position in x: -5.62541 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 750.852 eV     Position in x: -5.62542 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 750.852 eV     Position in x: -5.62544 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 750.852 eV     Position in x: -5.62541 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 659.934 eV     Position in x: -5.6254 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 750.852 eV     Position in x: -5.62496 mm 
+Event 9 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   110.514 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: -2.35129 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 110.514 eV     Position in x: -2.35129 mm 
+Event 10 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   15.4374 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 1.70366 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 15.4374 eV     Position in x: 1.70366 mm 
+Event 11 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   89.1033 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: -1.2503 cm 
+Particle:      gamma
+   6.91961 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: -1.24998 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 471.107 eV     Position in x: -1.24998 cm 
+Particle:         e-
+Process:     msc
+ PDG ID:      11
+ Edep: 389.714 eV     Position in x: -1.24998 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 200.489 eV     Position in x: -1.24998 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 4.69957 keV    Position in x: -1.24998 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 514.469 eV     Position in x: -1.24998 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  644.26 eV     Position in x: -1.24998 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 89.1033 eV     Position in x: -1.2503 cm 
+Event 12 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   26.9549 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 2.74968 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 26.9549 eV     Position in x: 2.74968 mm 
+Event 13 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+    7.8703 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: -9.70233 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  937.49 eV     Position in x: -9.70233 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.12756 keV    Position in x: -9.70233 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  1.0764 keV    Position in x: -9.70234 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.30602 keV    Position in x: -9.70234 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 574.445 eV     Position in x: -9.70234 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  764.41 eV     Position in x: -9.70233 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 708.438 eV     Position in x: -9.70233 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  375.52 eV     Position in x: -9.70233 mm 
+Event 14 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   84.3966 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 1.27188 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 84.3966 eV     Position in x: 1.27188 cm 
+Event 15 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   7.83689 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: -1.19066 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 440.023 eV     Position in x: -1.19066 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.60861 keV    Position in x: -1.19066 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 31.6123 eV     Position in x: -1.19066 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  1.3451 keV    Position in x: -1.19066 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.56706 keV    Position in x: -1.19066 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 545.171 eV     Position in x: -1.19066 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 299.312 eV     Position in x: -1.19066 cm 
+Event 16 end!
+
+Particle:      gamma
+   8.84455 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  291.01 eV     Position in x: -7.57228 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 903.268 eV     Position in x: -7.57201 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.05694 keV    Position in x: -7.57158 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 93.2059 eV     Position in x: -7.57157 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.02799 keV    Position in x: -7.5716 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 927.113 eV     Position in x: -7.57159 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.37925 keV    Position in x: -7.57159 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 406.928 eV     Position in x: -7.57159 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  592.42 eV     Position in x: -7.57161 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 792.081 eV     Position in x: -7.57156 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 304.263 eV     Position in x: -7.57158 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 361.084 eV     Position in x: -7.57201 mm 
+Event 17 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   87.0855 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 4.00543 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 87.0855 eV     Position in x: 4.00543 mm 
+Event 18 end!
+
+Particle:      gamma
+   8.67947 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  291.01 eV     Position in x: 1.39925 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.16504 keV    Position in x: 1.39923 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 854.368 eV     Position in x: 1.39921 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 569.044 eV     Position in x:  1.3992 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  2.4924 keV    Position in x: 1.39919 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.98506 keV    Position in x: 1.39919 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 356.989 eV     Position in x: 1.39919 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 339.154 eV     Position in x:  1.3992 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 313.281 eV     Position in x: 1.39921 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 604.137 eV     Position in x: 1.39922 cm 
+Event 19 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   61.4482 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  958.53 eV     Position in x: 2.53266 mm 
+Particle:      gamma
+   6.89857 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: 2.53272 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 5.54924 keV    Position in x: 2.53276 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 694.246 eV     Position in x: 2.53276 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  655.08 eV     Position in x: 2.53276 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 61.4482 eV     Position in x: 2.53266 mm 
+Event 20 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+    8.8865 keV
+Process:    phot
+ PDG ID:      22
+ Edep:   77.86 eV     Position in x: -1.38691 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.36009 keV    Position in x: -1.38691 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 344.696 eV     Position in x: -1.38691 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 4.37258 keV    Position in x: -1.38691 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 911.942 eV     Position in x: -1.38691 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 987.566 eV     Position in x: -1.38691 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 390.866 eV     Position in x: -1.38691 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 518.756 eV     Position in x: -1.38691 cm 
+Event 21 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   62.9179 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 1.15496 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 62.9179 eV     Position in x: 1.15496 cm 
+Event 22 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+     108.8 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 1.43621 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:   108.8 eV     Position in x: 1.43621 cm 
+Event 23 end!
+
+Particle:      gamma
+Particle:      gamma
+   5.82634 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  3.1776 keV    Position in x: 5.08779 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 587.737 eV     Position in x: 5.05197 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:     332 eV     Position in x: 5.00437 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.03147 keV    Position in x: 4.99033 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.09385 keV    Position in x: 5.03404 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  913.63 eV     Position in x: 5.07587 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  1.1827 keV    Position in x: 5.08153 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 684.956 eV     Position in x: 5.03692 mm 
+Event 24 end!
+
+Particle:      gamma
+   8.47581 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  537.28 eV     Position in x: 1.24904 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  1.9871 keV    Position in x: 1.24907 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 46.9193 eV     Position in x: 1.24908 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.31842 keV    Position in x: 1.24911 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.12889 keV    Position in x: 1.24912 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 782.495 eV     Position in x: 1.24913 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.61573 keV    Position in x: 1.24913 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 483.478 eV     Position in x: 1.24913 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 532.391 eV     Position in x: 1.24912 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  296.98 eV     Position in x: 1.24911 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 283.407 eV     Position in x: 1.24907 cm 
+Event 25 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   84.4133 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: -4.11789 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 84.4133 eV     Position in x: -4.11789 mm 
+Event 26 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   23.4396 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: -805.054 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 23.4396 eV     Position in x: -805.055 um 
+Event 27 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   7.96871 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: 3.72058 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 7.96871 keV    Position in x: 3.72055 mm 
+Event 28 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   37.3238 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x:  9.5183 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 37.3238 eV     Position in x:  9.5183 mm 
+Event 29 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   66.9207 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: -637.449 um 
+Particle:      gamma
+   6.91961 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: -617.671 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.45094 keV    Position in x: -617.651 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 318.948 eV     Position in x: -617.634 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 890.736 eV     Position in x: -617.627 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 964.324 eV     Position in x: -617.628 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  121.26 eV     Position in x: -617.627 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.24354 keV    Position in x: -617.623 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 721.184 eV     Position in x: -617.624 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 395.455 eV     Position in x: -617.627 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  508.36 eV     Position in x: -617.635 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 304.866 eV     Position in x: -617.651 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 66.9207 eV     Position in x: -637.449 um 
+Event 30 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   30.5195 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: 1.65721 mm 
+Particle:      gamma
+Particle:      gamma
+    7.7147 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  291.01 eV     Position in x: 904.563 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 377.992 eV     Position in x:  904.54 um 
+Particle:         e-
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 6.27144 keV    Position in x: 904.422 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 314.413 eV     Position in x: 904.543 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 750.852 eV     Position in x: 904.545 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 30.5195 eV     Position in x: 1.65721 mm 
+Event 31 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   29.3483 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: -7.88273 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 29.3483 eV     Position in x: -7.88273 mm 
+Event 32 end!
+
+Particle:      gamma
+Particle:      gamma
+   5.81254 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  3.1776 keV    Position in x: -8.28343 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.13772 keV    Position in x: -8.50014 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 638.002 eV     Position in x: -8.50787 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 531.716 eV     Position in x: -8.5532 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 351.269 eV     Position in x: -8.53458 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.95841 keV    Position in x: -8.51259 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 264.088 eV     Position in x: -8.53632 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 931.339 eV     Position in x: -8.54987 mm 
+Event 33 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   118.357 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: 9.94301 mm 
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 118.357 eV     Position in x: 9.94301 mm 
+Event 34 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   3.15336 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 6.93746 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 3.15336 eV     Position in x: 6.93746 mm 
+Event 35 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   98.1354 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: -7.46756 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 98.1354 eV     Position in x: -7.46756 mm 
+Event 36 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   7.92783 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: -2.38867 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.36598 keV    Position in x: -2.38873 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.19707 keV    Position in x: -2.38875 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 824.116 eV     Position in x: -2.38878 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 3.16836 keV    Position in x: -2.38879 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 759.252 eV     Position in x: -2.38878 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 329.949 eV     Position in x: -2.38875 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  283.11 eV     Position in x: -2.38873 mm 
+Event 37 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   72.1634 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: -569.963 um 
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   7.60086 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  404.85 eV     Position in x: 1.06354 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  283.66 eV     Position in x: 1.06346 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:   847.1 eV     Position in x:  1.0633 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.73689 keV    Position in x: 1.06333 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 215.584 eV     Position in x: 1.06332 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 290.564 eV     Position in x: 1.06331 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.46165 keV    Position in x:  1.0633 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 296.276 eV     Position in x: 1.06331 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 370.738 eV     Position in x: 1.06333 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 750.852 eV     Position in x: 1.06332 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 347.545 eV     Position in x:  1.0633 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 72.1634 eV     Position in x: -569.963 um 
+Event 38 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   8.80277 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  121.26 eV     Position in x: 982.947 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 5.18744 keV    Position in x: 982.906 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 286.157 eV     Position in x: 982.909 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 462.394 eV     Position in x: 982.904 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.54255 keV    Position in x: 982.902 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 858.026 eV     Position in x: 982.905 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 466.208 eV     Position in x: 982.909 um 
+Event 39 end!
+
+Particle:      gamma
+Particle:      gamma
+   5.83897 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  3.1776 keV    Position in x: -6.41116 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.48674 keV    Position in x: -6.29166 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 284.838 eV     Position in x: -6.27964 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  1.0154 keV    Position in x: -6.28225 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 723.711 eV     Position in x: -6.21979 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 586.081 eV     Position in x: -6.26644 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.74221 keV    Position in x: -6.24133 mm 
+Event 40 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   48.9357 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: -7.19005 mm 
+Particle:      gamma
+   6.91961 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: -7.19322 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.06722 keV    Position in x: -7.19322 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 360.547 eV     Position in x: -7.19322 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 4.98022 keV    Position in x: -7.19324 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 511.621 eV     Position in x: -7.19322 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 48.9357 eV     Position in x: -7.19005 mm 
+Event 41 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   73.5517 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:   77.86 eV     Position in x: 1.05462 cm 
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   8.78484 keV
+Process:    phot
+ PDG ID:      22
+ Edep:    80.5 eV     Position in x: 9.95153 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 389.073 eV     Position in x: 9.95152 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 527.678 eV     Position in x: 9.95148 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 665.952 eV     Position in x: 9.95146 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.78395 keV    Position in x: 9.95145 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 621.456 eV     Position in x: 9.95146 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 3.29257 keV    Position in x: 9.95147 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 744.351 eV     Position in x: 9.95145 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 377.037 eV     Position in x: 9.95146 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 382.778 eV     Position in x: 9.95148 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 73.5517 eV     Position in x: 1.05462 cm 
+Event 42 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   7.97227 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  958.53 eV     Position in x: -3.00512 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 150.333 eV     Position in x: -3.00511 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.25696 keV    Position in x: -3.00508 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  497.83 eV     Position in x: -3.00509 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 720.338 eV     Position in x: -3.00512 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.17506 keV    Position in x: -3.00512 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.59377 keV    Position in x: -3.00512 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.15094 keV    Position in x: -3.00511 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 340.746 eV     Position in x: -3.00511 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 528.957 eV     Position in x: -3.00509 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 557.331 eV     Position in x: -3.00511 mm 
+Event 43 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+       150 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 124.616 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:     150 eV     Position in x: 124.616 um 
+Event 44 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   20.5479 eV 
+Process:   compt
+ PDG ID:      22
+ Edep: 16.9326 eV     Position in x: -1.03845 cm 
+Particle:      gamma
+   8.60274 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  291.01 eV     Position in x: -1.04794 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 596.353 eV     Position in x: -1.04795 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 500.702 eV     Position in x: -1.04794 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 845.235 eV     Position in x: -1.04793 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 289.876 eV     Position in x: -1.04793 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  1.0923 keV    Position in x: -1.04793 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 3.01662 keV    Position in x: -1.04792 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 494.902 eV     Position in x: -1.04793 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 478.368 eV     Position in x: -1.04793 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 295.555 eV     Position in x: -1.04793 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  304.82 eV     Position in x: -1.04794 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 688.015 eV     Position in x: -1.04795 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 20.5479 eV     Position in x: -1.03845 cm 
+Event 45 end!
+
+Particle:      gamma
+Particle:      gamma
+   5.83423 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  3.1776 keV    Position in x:  9.3698 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 757.927 eV     Position in x: 9.36535 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 147.622 eV     Position in x: 9.42396 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 406.942 eV     Position in x: 9.44395 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 559.077 eV     Position in x:  9.4446 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 52.1781 eV     Position in x: 9.42057 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  1.3359 keV    Position in x: 9.38292 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.03707 keV    Position in x: 9.37451 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 300.471 eV     Position in x: 9.42235 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 358.528 eV     Position in x:  9.4432 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 398.628 eV     Position in x: 9.44599 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 479.882 eV     Position in x: 9.42821 mm 
+Event 46 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   8.40039 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  537.28 eV     Position in x: -9.76996 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 340.454 eV     Position in x: -9.76987 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.87918 keV    Position in x: -9.76965 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 3.88889 keV    Position in x: -9.76958 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 541.008 eV     Position in x: -9.76965 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 750.852 eV     Position in x: -9.76987 mm 
+Event 47 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   7.97879 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x:  7.8089 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.86313 keV    Position in x: 7.80887 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.53812 keV    Position in x: 7.80885 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 269.293 eV     Position in x: 7.80885 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 265.975 eV     Position in x: 7.80885 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.23012 keV    Position in x: 7.80885 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 538.731 eV     Position in x: 7.80885 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 273.416 eV     Position in x: 7.80887 mm 
+Event 48 end!
+
+Particle:      gamma
+Particle:      gamma
+   5.79483 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  3.1776 keV    Position in x: -5.15173 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  836.67 eV     Position in x: -5.1685 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 455.813 eV     Position in x: -4.98554 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 620.179 eV     Position in x: -4.90737 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 305.563 eV     Position in x: -4.9038 mm 
+Particle:         e-
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  405.52 eV     Position in x: -4.96431 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 530.299 eV     Position in x: -4.96827 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  270.42 eV     Position in x: -4.99197 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.63164 keV    Position in x: -5.01368 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 305.074 eV     Position in x: -4.99315 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 433.648 eV     Position in x: -4.90259 mm 
+Event 49 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   67.5603 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 1.43684 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 67.5603 eV     Position in x: 1.43684 cm 
+Event 50 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   178.817 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 5.52678 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 178.817 eV     Position in x: 5.52678 mm 
+Event 51 end!
+
+Particle:      gamma
+   8.79005 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  291.01 eV     Position in x: 1.41835 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 397.141 eV     Position in x: 1.41834 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 506.926 eV     Position in x: 1.41834 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 4.37006 keV    Position in x: 1.41835 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 457.503 eV     Position in x: 1.41834 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 921.682 eV     Position in x: 1.41834 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 333.183 eV     Position in x: 1.41834 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 413.051 eV     Position in x: 1.41835 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 639.647 eV     Position in x: 1.41834 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 750.852 eV     Position in x: 1.41834 cm 
+Event 52 end!
+
+Particle:      gamma
+Particle:      gamma
+   8.69873 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  313.43 eV     Position in x: 2.44216 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.05063 keV    Position in x: 2.08829 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 987.811 eV     Position in x: 1.80749 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 607.683 eV     Position in x: 1.61742 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 964.369 eV     Position in x: 1.49276 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.13251 keV    Position in x: 1.48649 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.42386 keV    Position in x: 1.44544 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 297.014 eV     Position in x: 1.48597 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 907.416 eV     Position in x: 1.49551 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 327.435 eV     Position in x: 1.80633 mm 
+Event 53 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   177.126 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: -4.56095 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 177.126 eV     Position in x: -4.56095 mm 
+Event 54 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   18.6938 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 1.07311 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 18.6938 eV     Position in x: 1.07311 cm 
+Event 55 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   60.3754 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  958.53 eV     Position in x: -6.27701 mm 
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 60.3754 eV     Position in x: -6.27701 mm 
+Event 56 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   187.811 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x:   4.238 mm 
+Particle:      gamma
+   7.06822 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: 4.23798 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.06258 keV    Position in x: 4.23794 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.42334 keV    Position in x: 4.23797 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 3.47532 keV    Position in x: 4.23798 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.10698 keV    Position in x: 4.23797 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 187.811 eV     Position in x:   4.238 mm 
+Event 57 end!
+
+Event 58 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   7.84156 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: 7.91673 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 7.84156 keV    Position in x: 7.91677 mm 
+Event 59 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+    160.38 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: -1.31702 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  160.38 eV     Position in x: -1.31702 cm 
+Event 60 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   209.965 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: 8.20109 mm 
+Particle:      gamma
+Particle:      gamma
+   7.60086 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  404.85 eV     Position in x: 8.14126 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.17852 keV    Position in x: 8.14144 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.27528 keV    Position in x:  8.1415 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 4.12664 keV    Position in x: 8.14146 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 269.567 eV     Position in x:  8.1415 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 750.852 eV     Position in x: 8.14143 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 209.965 eV     Position in x: 8.20109 mm 
+Event 61 end!
+
+Particle:      gamma
+Particle:      gamma
+   5.90984 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  3.1776 keV    Position in x: 2.86205 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.16408 keV    Position in x: 2.88278 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 290.432 eV     Position in x: 2.85784 mm 
+Particle:         e-
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 432.682 eV     Position in x:  2.8863 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 871.254 eV     Position in x: 2.84842 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.30443 keV    Position in x:  2.7972 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 846.964 eV     Position in x: 2.87544 mm 
+Event 62 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+    65.297 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 2.77668 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  65.297 eV     Position in x: 2.77668 mm 
+Event 63 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   11.7993 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  958.53 eV     Position in x: -145.776 um 
+Particle:      gamma
+   7.04718 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: -148.928 um 
+Particle:         e-
+Process:     msc
+ PDG ID:      11
+ Edep: 1.83285 keV    Position in x: -148.917 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 5.21433 keV    Position in x:  -148.9 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 11.7993 eV     Position in x: -145.776 um 
+Event 64 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   23.1059 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 8.88172 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 23.1059 eV     Position in x: 8.88172 mm 
+Event 65 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   39.5825 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: -7.58814 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 39.5825 eV     Position in x: -7.58814 mm 
+Event 66 end!
+
+Event 67 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   29.5913 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  958.53 eV     Position in x:    1.33 cm 
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 29.5913 eV     Position in x:    1.33 cm 
+Event 68 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   87.6906 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:    80.5 eV     Position in x: -1.35884 cm 
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 87.6906 eV     Position in x: -1.35884 cm 
+Event 69 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   7.94504 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: -4.49241 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 3.20242 keV    Position in x: -4.49238 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 727.136 eV     Position in x: -4.49238 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.19348 keV    Position in x: -4.49237 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 318.733 eV     Position in x: -4.49237 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.51227 keV    Position in x: -4.49237 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 991.005 eV     Position in x: -4.49237 mm 
+Event 70 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   110.881 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: 4.64847 mm 
+Particle:      gamma
+   7.06822 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: 4.65309 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  4.5441 keV    Position in x: 4.65305 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 199.986 eV     Position in x: 4.65305 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.32414 keV    Position in x: 4.65304 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 110.881 eV     Position in x: 4.64847 mm 
+Event 71 end!
+
+Particle:      gamma
+Particle:      gamma
+   5.72073 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  3.1776 keV    Position in x: -1.27139 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 773.533 eV     Position in x: -1.2626 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.20295 keV    Position in x: -1.24199 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 299.714 eV     Position in x: -1.23701 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 948.305 eV     Position in x: -1.2333 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 413.706 eV     Position in x: -1.23616 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.27275 keV    Position in x: -1.23736 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 283.831 eV     Position in x: -1.23629 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 525.947 eV     Position in x: -1.23368 cm 
+Event 72 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   6.27515 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: 1.26826 mm 
+Particle:      gamma
+   6.91961 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: 1.28472 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 789.646 eV     Position in x: 1.28472 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 206.183 eV     Position in x: 1.28473 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.27129 keV    Position in x: 1.28474 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.99941 keV    Position in x: 1.28473 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.37251 keV    Position in x: 1.28473 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 537.945 eV     Position in x: 1.28473 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 479.537 eV     Position in x: 1.28474 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 263.083 eV     Position in x: 1.28473 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 6.27515 eV     Position in x: 1.26826 mm 
+Event 73 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   8.63126 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  291.01 eV     Position in x: 6.39971 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.90164 keV    Position in x: 6.40013 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 3.68163 keV    Position in x: 6.40012 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 828.899 eV     Position in x: 6.40011 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 402.297 eV     Position in x: 6.40012 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 816.803 eV     Position in x: 6.40012 mm 
+Event 74 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   6.25737 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:    80.5 eV     Position in x: -4.83757 mm 
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 6.25737 eV     Position in x: -4.83757 mm 
+Event 75 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   1.93575 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: -1.12832 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.93575 eV     Position in x: -1.12832 cm 
+Event 76 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+    94.559 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 6.03137 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  94.559 eV     Position in x: 6.03137 mm 
+Event 77 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+    21.764 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 7.74076 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  21.764 eV     Position in x: 7.74075 mm 
+Event 78 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   13.5941 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: -3.08481 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 13.5941 eV     Position in x: -3.08481 mm 
+Event 79 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+    143.89 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 7.50707 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  143.89 eV     Position in x: 7.50707 mm 
+Event 80 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   130.708 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:   77.86 eV     Position in x: -8.68009 mm 
+Particle:      gamma
+Particle:      gamma
+   8.57433 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  291.01 eV     Position in x: -8.67619 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 8.57433 keV    Position in x: -8.6769 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 130.708 eV     Position in x: -8.68009 mm 
+Event 81 end!
+
+Particle:      gamma
+Particle:      gamma
+   8.67141 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  313.43 eV     Position in x: 1.36488 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.02895 keV    Position in x: 1.35945 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  339.14 eV     Position in x: 1.35128 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 320.099 eV     Position in x: 1.33187 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.44191 keV    Position in x: 1.31548 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 447.704 eV     Position in x: 1.32339 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 427.574 eV     Position in x: 1.32944 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 574.179 eV     Position in x: 1.32575 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 318.796 eV     Position in x: 1.32579 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 741.452 eV     Position in x: 1.32773 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 815.762 eV     Position in x: 1.32574 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.23579 keV    Position in x: 1.32679 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 286.303 eV     Position in x: 1.32584 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 425.896 eV     Position in x: 1.32918 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 267.846 eV     Position in x: 1.35141 cm 
+Event 82 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   8.86169 keV
+Process:    phot
+ PDG ID:      22
+ Edep:   77.86 eV     Position in x: 6.94968 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.02609 keV    Position in x: 6.94966 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  2.9004 keV    Position in x: 6.94962 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  985.88 eV     Position in x: 6.94962 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.10361 keV    Position in x: 6.94962 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 734.068 eV     Position in x: 6.94962 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 391.776 eV     Position in x: 6.94962 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 719.869 eV     Position in x: 6.94962 mm 
+Event 83 end!
+
+Particle:      gamma
+   8.71774 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  291.01 eV     Position in x: -6.27299 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 3.28567 keV    Position in x: -6.27301 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.53744 keV    Position in x: -6.2731 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.00793 keV    Position in x: -6.27312 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 370.925 eV     Position in x: -6.2731 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 515.784 eV     Position in x:  -6.273 mm 
+Event 84 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   35.6532 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  958.53 eV     Position in x: 1.29962 mm 
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   7.04718 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: -1.02426 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 4.65995 keV    Position in x: -1.02425 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.13188 keV    Position in x: -1.02425 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 255.345 eV     Position in x: -1.02425 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 35.6532 eV     Position in x: 1.29962 mm 
+Event 85 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   37.5834 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: -3.53149 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 37.5834 eV     Position in x: -3.53149 mm 
+Event 86 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   7.96728 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: 6.00049 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 519.967 eV     Position in x: 6.00049 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.70201 keV    Position in x: 6.00047 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.45493 keV    Position in x:  6.0005 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 955.224 eV     Position in x: 6.00051 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.04862 keV    Position in x: 6.00051 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.63226 keV    Position in x: 6.00051 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 395.386 eV     Position in x: 6.00047 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 258.888 eV     Position in x: 6.00049 mm 
+Event 87 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   140.961 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:    80.5 eV     Position in x: -3.06461 mm 
+Particle:      gamma
+    7.7766 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: -3.09139 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 366.912 eV     Position in x: -3.09139 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.51759 keV    Position in x: -3.09138 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 139.779 eV     Position in x: -3.09138 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 149.803 eV     Position in x: -3.09138 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.56007 keV    Position in x: -3.09136 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 3.04115 keV    Position in x: -3.09135 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 336.164 eV     Position in x: -3.09138 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 330.376 eV     Position in x: -3.09138 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 334.757 eV     Position in x: -3.09138 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 140.961 eV     Position in x: -3.06461 mm 
+Event 88 end!
+
+Particle:      gamma
+Particle:      gamma
+   5.75802 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  3.1776 keV    Position in x: -1.49424 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 348.773 eV     Position in x: -1.47901 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 996.794 eV     Position in x: -1.46582 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 482.005 eV     Position in x: -1.46589 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 845.649 eV     Position in x: -1.46933 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 384.108 eV     Position in x: -1.46771 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.06229 keV    Position in x: -1.46103 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  1.6384 keV    Position in x: -1.45881 cm 
+Event 89 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   7.96235 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: -1.49222 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.27378 keV    Position in x: -1.49222 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 292.546 eV     Position in x: -1.49222 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  4.7233 keV    Position in x: -1.49222 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 360.512 eV     Position in x: -1.49222 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 312.213 eV     Position in x: -1.49222 cm 
+Event 90 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   7.93466 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: 1.08303 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.21408 keV    Position in x: 1.08303 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 383.713 eV     Position in x: 1.08303 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 931.631 eV     Position in x: 1.08303 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.15747 keV    Position in x: 1.08303 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.61397 keV    Position in x: 1.08303 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 266.376 eV     Position in x: 1.08303 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 437.202 eV     Position in x: 1.08303 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.50954 keV    Position in x: 1.08303 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 420.677 eV     Position in x: 1.08303 cm 
+Event 91 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   71.8181 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x: 1.49428 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 71.8181 eV     Position in x: 1.49428 cm 
+Event 92 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   7.95804 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: -1.10073 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.55063 keV    Position in x: -1.10073 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 16.2494 eV     Position in x: -1.10073 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  194.15 eV     Position in x: -1.10073 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 293.915 eV     Position in x: -1.10073 cm 
+Particle:         e-
+ATOMIC DEEXCITATION FLUORESCENCE OCCURRED!
+Process:   eBrem
+ PDG ID:      11
+ Edep: 339.066 eV     Position in x: -1.10073 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.79037 keV    Position in x: -1.10073 cm 
+Particle:      gamma
+   355.127 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: -1.10075 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 355.127 eV     Position in x: -1.10075 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 417.509 eV     Position in x: -1.10073 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 638.466 eV     Position in x: -1.10073 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 696.567 eV     Position in x: -1.10073 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  728.51 eV     Position in x: -1.10073 cm 
+Event 93 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   137.737 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: 688.467 um 
+Particle:      gamma
+   6.91961 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: 693.575 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 252.742 eV     Position in x: 693.571 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.63322 keV    Position in x: 693.564 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 724.842 eV     Position in x: 693.574 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 3.32756 keV    Position in x: 693.578 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 289.404 eV     Position in x: 693.564 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 691.845 eV     Position in x:  693.57 um 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 137.737 eV     Position in x: 688.467 um 
+Event 94 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   45.7722 eV 
+Process:    phot
+ PDG ID:      22
+ Edep:  8.9432 keV    Position in x:  1.2523 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 45.7722 eV     Position in x:  1.2523 cm 
+Event 95 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   129.784 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: -1.43606 cm 
+Particle:      gamma
+   6.91961 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  1.0861 keV    Position in x: -1.43601 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  1.0685 keV    Position in x: -1.43601 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 793.005 eV     Position in x: -1.43601 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 729.875 eV     Position in x: -1.43601 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep:  3.5963 keV    Position in x: -1.43601 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 731.929 eV     Position in x: -1.43601 cm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 129.784 eV     Position in x: -1.43606 cm 
+Event 96 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   113.961 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: 2.68982 mm 
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 113.961 eV     Position in x: 2.68982 mm 
+Event 97 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+   48.6873 eV 
+COMPTON SCATTERING OCCURRED!
+Process:    phot
+ PDG ID:      22
+ Edep:  958.53 eV     Position in x: 2.33403 mm 
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 48.6873 eV     Position in x: 2.33403 mm 
+Event 98 end!
+
+Particle:      gamma
+Particle:      gamma
+Particle:      gamma
+    7.9977 keV
+Process:    phot
+ PDG ID:      22
+ Edep:  937.49 eV     Position in x: 2.42736 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.53883 keV    Position in x: 2.42737 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 658.825 eV     Position in x: 2.42737 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 2.52458 keV    Position in x: 2.42737 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.12436 keV    Position in x: 2.42737 mm 
+Particle:         e-
+Process:   eIoni
+ PDG ID:      11
+ Edep: 1.15112 keV    Position in x: 2.42738 mm 
+Event 99 end!
+
+******************************************************************************
+*Tree    :Particles : Tree that contains primary electron info               *
+*Entries :      118 : Total =            5268 bytes  File  Size =          0 *
+*        :          : Tree compression factor =   1.00                       *
+******************************************************************************
+*Br    0 :electron_branch : energy/D:x/F:y/F:z/F:dx/F:dy/F:dz/F              *
+*Entries :      118 : Total  Size=       4908 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+

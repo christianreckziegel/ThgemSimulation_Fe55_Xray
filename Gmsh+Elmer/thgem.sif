@@ -117,23 +117,23 @@ End
 Boundary Condition 1
   Target Boundaries(1) = 8 
   Name = "anodo"
-  Potential = 0
+  Potential = -3700
 End
 
 Boundary Condition 2
   Target Boundaries(1) = 7 
   Name = "bottom"
-  Potential = -2000
+  Potential = -3500
 End
 
 Boundary Condition 3
   Target Boundaries(1) = 6
   Name = "top"
-  Potential = -3500
+  Potential = -2000
 End
 
 Boundary Condition 4
   Target Boundaries(1) = 5
   Name = "catodo"
-  Potential = -3700
+  Potential = 0
 End
