@@ -23,8 +23,13 @@ public:
   virtual ~RootAnalysis();
   
   static RootAnalysis* Instance();
+  // For gamma fluorescence energy collection
   void Write(G4double gammaEnergy);
+  // For electrons from primary gamma source
   void Write(G4double kinEnergy, G4ThreeVector position, G4ThreeVector momentum);
+  // For fluorescence electrons
+  void WriteFluElec(G4double kinEnergy, G4ThreeVector position, G4ThreeVector momentum);
+  
   void Close();
 
 protected:
@@ -32,10 +37,12 @@ protected:
   
 private:
   TTree* fTTree;
+  TTree* fluorElecTTree;
   TTree* fluorTTree;
   TFile* fFile;
   int fNevents;
   PARTICLE electron;
+  PARTICLE fluoElectron;
   G4double fluorEnergy;
   
 };

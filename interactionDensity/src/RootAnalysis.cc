@@ -18,11 +18,13 @@ static RootAnalysis* instance = 0;
 RootAnalysis::RootAnalysis()
 {
   fFile = new TFile("particles.root","RECREATE");
-  fTTree = new TTree("Particles","Tree that contains primary electron info");
-  fluorTTree = new TTree("Fluorescence","Tree that contains fluorescence gamma energy");
+  fTTree = new TTree("Particles","Tree that contains primary gamma electrons info");
+  fluorElecTTree = new TTree("Fluorescence_electrons","Tree that contains fluorescence electrons info");
+  fluorTTree = new TTree("Fluorescence_gammas","Tree that contains fluorescence gamma energy");
   
   //static HIT hit;
   fTTree->Branch("electron_branch", &electron, "energy/D:x/F:y/F:z/F:dx/F:dy/F:dz/F");
+  fluorElecTTree->Branch("electron_branch", &fluoElectron, "energy/D:x/F:y/F:z/F:dx/F:dy/F:dz/F");
   fluorTTree->Branch("fluor_branch", &fluorEnergy, "fluorEnergy/D");
 }
 
@@ -51,7 +53,7 @@ void RootAnalysis::Write(G4double gammaEnergy)
   
 }
 
-// Write electrons data
+// Write primary gamma electrons data
 void RootAnalysis::Write(G4double kinEnergy, G4ThreeVector position, G4ThreeVector momentum)
 {
 
@@ -68,11 +70,27 @@ void RootAnalysis::Write(G4double kinEnergy, G4ThreeVector position, G4ThreeVect
   //G4cout << hit.eDep << G4endl;
 }
 
+// Write fluorescence electrons data
+void RootAnalysis::WriteFluElec(G4double kinEnergy, G4ThreeVector position, G4ThreeVector momentum)
+{
+
+  fluoElectron.energy = kinEnergy/eV;
+  fluoElectron.x = position.getX()/cm;
+  fluoElectron.y = position.getY()/cm;
+  fluoElectron.z = position.getZ()/cm;
+  fluoElectron.dx = momentum.getX();
+  fluoElectron.dy = momentum.getY();
+  fluoElectron.dz = momentum.getZ();
+
+  fluorElecTTree->Fill();
+}
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void RootAnalysis::Close()
 {
   fTTree->Print();
+  fluorElecTTree->Print();
   fluorTTree->Print();
   fFile->Write();
   fFile->Close();

@@ -306,11 +306,11 @@ G4VPhysicalVolume* UserDetectorConstruction::Construct()
     SensitiveDetector* aTrackerSD = new SensitiveDetector(nameSD, "DetectorHitsCollection");
     G4SDManager::GetSDMpointer()->AddNewDetector(aTrackerSD);
     SetSensitiveDetector("Gas", aTrackerSD, true);
-    SetSensitiveDetector("Walls", aTrackerSD, true);
-    SetSensitiveDetector("KaptonUpperCover", aTrackerSD, true);
-    SetSensitiveDetector("CopperLowerCover", aTrackerSD, true);
+    //SetSensitiveDetector("Walls", aTrackerSD, true);
+    //SetSensitiveDetector("KaptonUpperCover", aTrackerSD, true);
+    //SetSensitiveDetector("CopperLowerCover", aTrackerSD, true);
     SetSensitiveDetector("CopperUpperTGEM", aTrackerSD, true);
-    SetSensitiveDetector("KaptonMiddleLayer", aTrackerSD, true);
+    //SetSensitiveDetector("KaptonMiddleLayer", aTrackerSD, true);
     SetSensitiveDetector("CopperLowerTGEM", aTrackerSD, true);
     
     

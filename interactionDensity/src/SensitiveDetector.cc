@@ -54,7 +54,8 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
     G4String processName = ((aStep->GetPostStepPoint())->GetProcessDefinedStep())->GetProcessName();
     
     //Getting particle ID
-    //G4int particleID = track->GetTrackID();
+    G4int particleID = track->GetTrackID();
+    
     
     // Detecting fluorescence
     G4int fPhotoGamma = G4PhysicsModelCatalog::GetIndex("phot_fluo");
@@ -85,7 +86,7 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
     
     int number_secondaries = (*secondary).size();
     
-    if (particleName=="gamma" && number_secondaries!=0) {
+    if (particleName=="gamma" && particleID == 1 && number_secondaries!=0) {
         G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
         G4double kinEnergy = 0;
         G4ThreeVector secondaryPosition;
@@ -100,15 +101,35 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
                 secondaryPosition = (*secondary)[i]->GetPosition();
                 momentumDirection = (*secondary)[i]->GetMomentumDirection();
 
-                G4cout << "Electron energy: " << std::setw(10) << G4BestUnit(kinEnergy,"Energy") << G4endl;
+                G4cout << "PrimaryGammaElectron energy: " << std::setw(10) << G4BestUnit(kinEnergy,"Energy") << G4endl;
 
                 RootAnalysis* rootAnalysis = RootAnalysis::Instance();
                 rootAnalysis->Write(kinEnergy, secondaryPosition, momentumDirection);
             }
-            if(secondaryName == "gamma"){
-            	//G4cout << "COMPTON SCATTERING OCCURRED!" << G4endl;
-            }
         }
+    } else if(particleName=="gamma" && particleID != 1 && number_secondaries!=0){ // if not the primary gamma
+    	if(idx == fPhotoGamma || idx == fComptGamma){ // if occurred fluorescence, from photoelectric ef. or compton sc.
+	    	G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
+		G4double kinEnergy = 0;
+		G4ThreeVector secondaryPosition;
+		G4ThreeVector momentumDirection;
+	    	for (int i=0; i<number_secondaries; i++) {
+		    const G4ParticleDefinition* secondaryDefinition = (*secondary)[i]->GetParticleDefinition();
+		    G4String secondaryName = secondaryDefinition->GetParticleName();
+		    
+		    if (secondaryName == "e-") {
+		        //Kinectic energy of the secondary
+		        kinEnergy = (*secondary)[i]->GetKineticEnergy();
+		        secondaryPosition = (*secondary)[i]->GetPosition();
+		        momentumDirection = (*secondary)[i]->GetMomentumDirection();
+
+		        G4cout << "FluoElectron energy: " << std::setw(10) << G4BestUnit(kinEnergy,"Energy") << G4endl;
+
+		        RootAnalysis* rootAnalysis = RootAnalysis::Instance();
+		        rootAnalysis->WriteFluElec(kinEnergy, secondaryPosition, momentumDirection);
+		    }
+		}
+    	}
     }
     
     
