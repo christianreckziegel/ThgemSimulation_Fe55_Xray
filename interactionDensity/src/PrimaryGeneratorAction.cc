@@ -23,11 +23,11 @@ G4VUserPrimaryGeneratorAction() {
     
     G4int n_particle = 1;
     G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
-    G4ParticleDefinition* particle = particleTable->FindParticle("gamma"); //"e-"
+    G4ParticleDefinition* particle = particleTable->FindParticle("gamma"); //"e-" or "gamma"
     gun = new G4ParticleGun(n_particle);
     gun->SetParticleDefinition(particle);
     gun->SetParticleMomentumDirection(G4ThreeVector(0,0,-1));// original (0,0,-1)
-    gun->SetParticlePosition(G4ThreeVector(0,0, 4.*cm)); // (0,0, 4.*cm)
+    gun->SetParticlePosition(G4ThreeVector(0,0, 4.*cm)); // (0,0, 4.*cm) or z=1.4521cm above 0.5cm air gap
 }
 
 PrimaryGeneratorAction::~PrimaryGeneratorAction() {
@@ -49,8 +49,9 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent) {
     gun->SetParticlePosition(G4ThreeVector(x,y, 4.*cm)); //(x,y,4.*cm)
 
     //Gamma energy
-    double energy = (G4RandGauss::shoot(5900, 50))*eV; //Gaussian distribuition mu = 5900, sigma = 50
-    //double energy = 5900*eV;
+    //double energy = (G4RandGauss::shoot(5900, 50))*eV; //Gaussian distribuition mu = 5900, sigma = 50, for X-ray
+    //Auger electrons energy from Fe55 - > 5.19keV
+    double energy = 5190*eV;
     
     gun->SetParticleEnergy(energy);
     gun->GeneratePrimaryVertex(anEvent);

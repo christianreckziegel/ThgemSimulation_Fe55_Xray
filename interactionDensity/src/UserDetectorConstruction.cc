@@ -133,7 +133,7 @@ G4VPhysicalVolume* UserDetectorConstruction::Construct()
     
     G4LogicalVolume* logicalWorld =
         new G4LogicalVolume(world,                  //its solid
-                            air,                    //its material
+                            air,                    //its material, originally air
                             "World");               //its name
     
     G4VPhysicalVolume* physicalWorld =
@@ -261,9 +261,22 @@ G4VPhysicalVolume* UserDetectorConstruction::Construct()
     							   6,
     							   true);
     
-    
-    
-    
+    // Air box in front of the THGEM scheme
+    /*G4double airThick = 0.5*cm;
+    G4Box* airBox = new G4Box("Walls", 
+    				(internalEdge/2.) + wallThick, (internalEdge/2.) + wallThick, 
+    				(airThick)/2.);
+    G4LogicalVolume* airBoxLog = new G4LogicalVolume(wallBox,
+    						      air,
+    						      "Air");
+    G4PVPlacement* airPosition = new G4PVPlacement(0,
+    						    G4ThreeVector(0*mm,0*mm,z_kapton+(kaptonThick+airThick)/2.),
+    						    airBoxLog,
+    						    "Air",
+    						    logicalWorld,
+    						    false,
+    						    0,
+    						    true);*/
     
     
     

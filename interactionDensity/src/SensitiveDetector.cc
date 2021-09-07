@@ -86,6 +86,7 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
     
     int number_secondaries = (*secondary).size();
     
+    // X-ray and Fluorescence
     if (particleName=="gamma" && particleID == 1 && number_secondaries!=0) {
         G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
         G4double kinEnergy = 0;
@@ -131,6 +132,30 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
 		}
     	}
     }
+    
+    // Auger electrons
+    /*if (particleName=="e-" && particleID == 1 && number_secondaries!=0) {
+        G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
+        G4double kinEnergy = 0;
+        G4ThreeVector secondaryPosition;
+        G4ThreeVector momentumDirection;
+        for (int i=0; i<number_secondaries; i++) {
+            const G4ParticleDefinition* secondaryDefinition = (*secondary)[i]->GetParticleDefinition();
+            G4String secondaryName = secondaryDefinition->GetParticleName();
+            
+            if (secondaryName == "e-") {
+                //Kinectic energy of the secondary
+                kinEnergy = (*secondary)[i]->GetKineticEnergy();
+                secondaryPosition = (*secondary)[i]->GetPosition();
+                momentumDirection = (*secondary)[i]->GetMomentumDirection();
+
+                G4cout << "SecondaryElectron energy: " << std::setw(10) << G4BestUnit(kinEnergy,"Energy") << G4endl;
+
+                RootAnalysis* rootAnalysis = RootAnalysis::Instance();
+                rootAnalysis->Write(kinEnergy, secondaryPosition, momentumDirection);
+            }
+        }
+    }*/
     
     
 

@@ -18,7 +18,7 @@ echo "Running main.exe"
 #argument 2 = run mode (e.g. *(argv[2])=='1' execute vis.mac)
 #	1 = execute vis.mac
 #	!1 = without visualization
-./main 4 2
+./main 4 1
 
 echo "End of Geant4 execution"
 
