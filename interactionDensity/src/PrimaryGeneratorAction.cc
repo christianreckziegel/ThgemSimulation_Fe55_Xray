@@ -49,9 +49,9 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent) {
     gun->SetParticlePosition(G4ThreeVector(x,y, 4.*cm)); //(x,y,4.*cm)
 
     //Gamma energy
-    //double energy = (G4RandGauss::shoot(5900, 50))*eV; //Gaussian distribuition mu = 5900, sigma = 50, for X-ray
+    double energy = (G4RandGauss::shoot(5900, 50))*eV; //Gaussian distribuition mu = 5900, sigma = 50, for X-ray
     //Auger electrons energy from Fe55 - > 5.19keV
-    double energy = 5190*eV;
+    //double energy = 5190*eV;
     
     gun->SetParticleEnergy(energy);
     gun->GeneratePrimaryVertex(anEvent);

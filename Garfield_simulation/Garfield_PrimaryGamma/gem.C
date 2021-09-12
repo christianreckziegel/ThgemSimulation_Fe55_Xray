@@ -63,7 +63,7 @@ int main(int argc, char * argv[]) {
   //gas->LoadGasFile("xe_70_co2_30.gas");
 
   // Define path to executable
-  std::string path = "~/Documents/Simulação/Publication_Lucas/Garfield_step_of_simulation";
+  //std::string path = "~/Documents/Simulação/Publication_Lucas/Garfield_step_of_simulation";
   // Load the electric field map.
   ComponentElmer* elm = new ComponentElmer(
       "thgem/mesh.header", 
@@ -102,7 +102,7 @@ int main(int argc, char * argv[]) {
   //aval->EnablePlotting(viewDrift);
 
   TFile *inputFile = TFile::Open("ArParticles.root");
-  TTree* theTree = (TTree*) inputFile->Get("Particles");
+  TTree* theTree = (TTree*) inputFile->Get("Fluorescence_electrons");
   TBranch* electron_branch = theTree->GetBranch("electron_branch");
   PARTICLE electron;
   electron_branch->SetAddress(&electron);
