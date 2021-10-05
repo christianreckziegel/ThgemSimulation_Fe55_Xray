@@ -20,7 +20,7 @@ make
 
 # Linha de execução do seu experimento
 echo "Submetendo job array..."
-sbatch --array=0-10 meuJobArray.sh
+sbatch --array=0-100 meuJobArray.sh
 
 
 

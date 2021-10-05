@@ -43,7 +43,8 @@ G4VPhysicalVolume* UserDetectorConstruction::Construct()
     G4Material* air  = nist->FindOrBuildMaterial("G4_AIR");
     G4Material* kapton = nist->FindOrBuildMaterial("G4_KAPTON");
     G4Material* copper = nist->FindOrBuildMaterial("G4_Cu");
-
+    G4Material* vac = nist->FindOrBuildMaterial("G4_Galactic");
+    
     //Creating gas mixture
     
     G4double z, a, fractionOfNobleGas, density,temperature, pressure;
@@ -177,7 +178,7 @@ G4VPhysicalVolume* UserDetectorConstruction::Construct()
                   internalEdge/2., internalEdge/2., (driftThick+thgemThick+inductionThick)/2.);     //its size
     G4LogicalVolume* logicalGasBox =
         new G4LogicalVolume(gasBox,           //its solid
-                            gas,                    //its material
+                            gas,                    //its material = gas
                             "Gas");        //its name
     // Definig walls for the gaseous volume with boolean operation
     G4Box* BigBox = new G4Box("Walls", 
@@ -185,7 +186,7 @@ G4VPhysicalVolume* UserDetectorConstruction::Construct()
     				(driftThick+thgemThick+inductionThick)/2.);
     G4SubtractionSolid* wallBox = new G4SubtractionSolid("BigBox-GasBox", BigBox, gasBox);
     G4LogicalVolume* logWallBox = new G4LogicalVolume(wallBox,
-    						      kapton,
+    						      kapton, //kapton
     						      "Walls");
     G4PVPlacement* wallPosition = new G4PVPlacement(0,
     						    G4ThreeVector(0*mm,0*mm,z_gas),
@@ -206,7 +207,7 @@ G4VPhysicalVolume* UserDetectorConstruction::Construct()
     
     // Defining upper cover made of kapton
     G4Box* kaptUpCover = new G4Box("KaptonUpperCover", (internalEdge/2.)+wallThick,(internalEdge/2.)+wallThick,kaptonThick/2.);
-    G4LogicalVolume* logKaptUpCover = new G4LogicalVolume(kaptUpCover, kapton, "KaptonUpperCover");
+    G4LogicalVolume* logKaptUpCover = new G4LogicalVolume(kaptUpCover, kapton, "KaptonUpperCover"); //kapton
     G4PVPlacement* kaptUpCoverPosition = new G4PVPlacement(0,
     							   G4ThreeVector(0*cm,0*cm, z_kapton),
     							   logKaptUpCover,
@@ -217,7 +218,7 @@ G4VPhysicalVolume* UserDetectorConstruction::Construct()
     							   true);
     // Defining lower cover made of copper
     G4Box* CuLowCover = new G4Box("CopperLowerCover",(internalEdge/2.)+wallThick,(internalEdge/2.)+wallThick,copperThick/2.);
-    G4LogicalVolume* logCuLowCover = new G4LogicalVolume(CuLowCover, copper, "CopperLowerCover");
+    G4LogicalVolume* logCuLowCover = new G4LogicalVolume(CuLowCover, copper, "CopperLowerCover"); //copper
     G4PVPlacement* CuLowCoverPosition = new G4PVPlacement(0,
     							   G4ThreeVector(0,0,z_copper),// -2.5cm - 0.15cm
     							   logCuLowCover,
@@ -229,7 +230,7 @@ G4VPhysicalVolume* UserDetectorConstruction::Construct()
     // Defining ThickGEM
     //copper upper cover
     G4Box* coppUpTG = new G4Box("CopperUpperTGEM", internalEdge/2.,internalEdge/2.,thgem_up_copp/2.);
-    G4LogicalVolume* logcoppUpTG = new G4LogicalVolume(coppUpTG, copper, "CopperUpperTGEM");
+    G4LogicalVolume* logcoppUpTG = new G4LogicalVolume(coppUpTG, copper, "CopperUpperTGEM"); // copper
     G4PVPlacement* coppUpTGPosition = new G4PVPlacement(0,
     							   G4ThreeVector(0,0,thgem_kapt/2. + thgem_up_copp/2.),// 0.245*mm
     							   logcoppUpTG,
@@ -240,7 +241,7 @@ G4VPhysicalVolume* UserDetectorConstruction::Construct()
     							   true);
     //kapton middle layer
     G4Box* kapTG = new G4Box("KaptonMiddleLayer", internalEdge/2.,internalEdge/2.,thgem_kapt/2.);
-    G4LogicalVolume* logkapTG = new G4LogicalVolume(kapTG, kapton, "KaptonMiddleLayer");
+    G4LogicalVolume* logkapTG = new G4LogicalVolume(kapTG, kapton, "KaptonMiddleLayer"); //kapton
     G4PVPlacement* kapTGPosition = new G4PVPlacement(0,
     							   G4ThreeVector(0,0,0*cm),
     							   logkapTG,
@@ -251,7 +252,7 @@ G4VPhysicalVolume* UserDetectorConstruction::Construct()
     							   true);
     //copper lower cover
     G4Box* coppLowTG = new G4Box("CopperLowerTGEM", internalEdge/2.,internalEdge/2.,thgem_down_copp/2.);
-    G4LogicalVolume* logcoppLowTG = new G4LogicalVolume(coppLowTG, copper, "CopperLowerTGEM");
+    G4LogicalVolume* logcoppLowTG = new G4LogicalVolume(coppLowTG, copper, "CopperLowerTGEM"); //copper
     G4PVPlacement* coppLowTGPosition = new G4PVPlacement(0,
     							   G4ThreeVector(0,0,-thgem_kapt/2. - thgem_up_copp/2.),
     							   logcoppLowTG,

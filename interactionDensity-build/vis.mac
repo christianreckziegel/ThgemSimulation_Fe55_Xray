@@ -30,7 +30,7 @@
 # To get nice view
 /vis/geometry/set/visibility World 0 false
 /vis/viewer/set/viewpointThetaPhi 120 150
-/vis/viewer/zoom 2
+#/vis/viewer/zoom 2
 #
 # Axes, scale, etc.
 /vis/scene/add/scale 5 cm  # Simple scale line

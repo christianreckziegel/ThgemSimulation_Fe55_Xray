@@ -37,7 +37,7 @@ void mergeFiles(){
 	TChain* chain = new TChain ("Results"); //"Results" is one of the trees inside the file
 	TString strEnergy = "6"; // in keV
 	TString strBase = "ArResult_UpTo"+strEnergy+"keV_";
-	for(int i = 0; i <= 400; i++){
+	for(int i = 0; i <= 399; i++){
 		TString resultPart = strBase + i +".root";
 		chain->Add(resultPart);
 		
@@ -57,7 +57,7 @@ void mergeFiles(){
 	
 	int n_entries = theTree->GetEntries();
 	int status, np, nEnd;
-	cout << "Há " << n_entries << " entries.\n";
+	cout << "There are " << n_entries << " entries.\n";
 	
 	
 	inputFile->Close();

@@ -17,10 +17,13 @@
 #include "G4SystemOfUnits.hh"
 #include "G4Gamma.hh"
 
-SensitiveDetector::SensitiveDetector(const G4String& name,
-                                     const G4String& hitsCollectionName) :
-G4VSensitiveDetector(name)
-,fHitsCollection(NULL)
+SensitiveDetector::SensitiveDetector(const G4String& name, const G4String& hitsCollectionName):
+G4VSensitiveDetector(name),
+outRecI(0),
+outRecS("NULL"),
+idxPrimary(0),
+isPhot(0),
+fHitsCollection(NULL)
 {
   collectionName.insert(hitsCollectionName);
 }
@@ -61,6 +64,7 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
     G4int fPhotoGamma = G4PhysicsModelCatalog::GetIndex("phot_fluo");
     G4int fComptGamma = G4PhysicsModelCatalog::GetIndex("compt_fluo");
     G4int idx = track->GetCreatorModelID();
+    G4int idxSecond;
     if (track->GetDefinition() == G4Gamma::Gamma()) {
 	    G4cout << "Gamma track!\n";
 	    if(idx == fPhotoGamma || idx == fComptGamma) {
@@ -95,7 +99,7 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
         for (int i=0; i<number_secondaries; i++) {
             const G4ParticleDefinition* secondaryDefinition = (*secondary)[i]->GetParticleDefinition();
             G4String secondaryName = secondaryDefinition->GetParticleName();
-            
+            idxSecond = (*secondary)[i]->GetCreatorModelID();
             if (secondaryName == "e-") {
                 //Kinectic energy of the secondary
                 kinEnergy = (*secondary)[i]->GetKineticEnergy();
@@ -106,10 +110,24 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
 
                 RootAnalysis* rootAnalysis = RootAnalysis::Instance();
                 rootAnalysis->Write(kinEnergy, secondaryPosition, momentumDirection);
+                
+                // Outside rectangle
+                if(secondaryPosition.getX()/cm > 1.5 || secondaryPosition.getX()/cm < -1.5 || secondaryPosition.getY()/cm > 1.5 || secondaryPosition.getY()/cm < -1.5){
+                	
+                	G4cout << "Process outside rectangle at (" 
+                	<< secondaryPosition.getX()/cm
+                	<< "; " << secondaryPosition.getY()/cm
+                	<<")cm: " << G4PhysicsModelCatalog::GetModelName(idxSecond)
+                	<< G4endl;
+                	outRecI++;
+                	outRecS = G4PhysicsModelCatalog::GetModelName(idxSecond);
+                	if(outRecS == "phot" ){ isPhot++; }
+                }
             }
         }
     } else if(particleName=="gamma" && particleID != 1 && number_secondaries!=0){ // if not the primary gamma
-    	if(idx == fPhotoGamma || idx == fComptGamma){ // if occurred fluorescence, from photoelectric ef. or compton sc.
+    	// if occurred fluorescence, from photoelectric ef. or compton sc.
+    	if(idx == fPhotoGamma || idx == fComptGamma){ 
 	    	G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
 		G4double kinEnergy = 0;
 		G4ThreeVector secondaryPosition;
@@ -178,6 +196,8 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
 
 
 
-void SensitiveDetector::EndOfEvent(G4HCofThisEvent*)
-{
+void SensitiveDetector::EndOfEvent(G4HCofThisEvent*){
+	G4cout << "There were " << outRecI << " electrons outside the rectangle in this event.\n";
+	G4cout << "The last one was " << outRecS << G4endl;
+	G4cout << "From these, " << isPhot << " were phot processes\n";
 }

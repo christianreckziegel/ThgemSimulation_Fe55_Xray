@@ -58,8 +58,8 @@ void resultAnalysis(){
 	theTree->SetBranchAddress("Avalanche_y",&yf);
 	theTree->SetBranchAddress("Number_of_Electrons_endpoint",&nEndPoint);
 	
-	int n_entries = theTree->GetEntries();
-	cout << "Há " << n_entries << " entries.\n";
+	int n_entries = theTree->GetEntries() - 14;
+	cout << "There are " << n_entries << " useful entries.\n";
 	
 	TCanvas* cPosition = new TCanvas("Position", "2D position canvas");
 	int nBinsX = 100;

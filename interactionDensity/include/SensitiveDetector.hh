@@ -24,8 +24,14 @@ class SensitiveDetector : public G4VSensitiveDetector
     
     private:
         DetectorHitsCollection* fHitsCollection;
-
-
+	// out of rectangle int and string
+	G4int outRecI;
+	G4String outRecS;
+	// 
+	G4int idxPrimary;
+	G4int isPhot;
+	
+	
 };
 #endif
 
