@@ -59,6 +59,10 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
     //Getting particle ID
     G4int particleID = track->GetTrackID();
     
+    //Energy deposit
+    G4double energy = aStep->GetTotalEnergyDeposit();
+    // if particle inside sensitive detector, but no interaction with the medium
+    if (energy == 0.) return false; 
     
     // Detecting fluorescence
     G4int fPhotoGamma = G4PhysicsModelCatalog::GetIndex("phot_fluo");
@@ -74,14 +78,7 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
               rootAnalysis->Write(energyTrack);
 	    }
     
-  }  
-    
-    
-    //Energy deposit
-    G4double energy = aStep->GetTotalEnergyDeposit();
-    
-    
-    if (energy == 0.) return false; //Particle inside sensitive detector, but no interaction with the medium
+    }  
     
     //
     //Getting the secondary electron information
@@ -90,7 +87,10 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
     
     int number_secondaries = (*secondary).size();
     
+    //
     // X-ray and Fluorescence
+    //
+    // Collecting electrons from primary X-ray (from particle gun)
     if (particleName=="gamma" && particleID == 1 && number_secondaries!=0) {
         G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
         G4double kinEnergy = 0;
@@ -111,7 +111,7 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
                 RootAnalysis* rootAnalysis = RootAnalysis::Instance();
                 rootAnalysis->Write(kinEnergy, secondaryPosition, momentumDirection);
                 
-                // Outside rectangle
+                // Getting electrons outside particle gun launching rectangle -1.5 < x,y < 1.5 cm
                 if(secondaryPosition.getX()/cm > 1.5 || secondaryPosition.getX()/cm < -1.5 || secondaryPosition.getY()/cm > 1.5 || secondaryPosition.getY()/cm < -1.5){
                 	
                 	G4cout << "Process outside rectangle at (" 
@@ -125,7 +125,12 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
                 }
             }
         }
-    } else if(particleName=="gamma" && particleID != 1 && number_secondaries!=0){ // if not the primary gamma
+    }
+    //
+    // Collecting electrons from fluorescence
+    //
+    // If not the primary gamma (from particle gun)
+    else if(particleName=="gamma" && particleID != 1 && number_secondaries!=0){
     	// if occurred fluorescence, from photoelectric ef. or compton sc.
     	if(idx == fPhotoGamma || idx == fComptGamma){ 
 	    	G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
@@ -143,15 +148,25 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
 		        momentumDirection = (*secondary)[i]->GetMomentumDirection();
 
 		        G4cout << "FluoElectron energy: " << std::setw(10) << G4BestUnit(kinEnergy,"Energy") << G4endl;
-
+		        // Collecting initial position of the electron
+		        /*G4ThreeVector i_Position = (*secondary)[i]->GetVertexPosition();
+		        G4double zPos = i_Position.getY()/cm;
+		        // Check if electron was created inside THGEM (sensitivity turned on only on gas medium)
+		        if(zPos > -0.026 || zPos < 0.026){
+		        	G4cout << "Electron generated inside THGEM! (Copper and kapton included)\n"; 
+		        }*/
+		        
 		        RootAnalysis* rootAnalysis = RootAnalysis::Instance();
+		        // Storing in fluorescence electrons TTree
 		        rootAnalysis->WriteFluElec(kinEnergy, secondaryPosition, momentumDirection);
 		    }
 		}
     	}
     }
     
+    //
     // Auger electrons
+    //
     /*if (particleName=="e-" && particleID == 1 && number_secondaries!=0) {
         G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
         G4double kinEnergy = 0;
@@ -197,7 +212,7 @@ G4bool SensitiveDetector::ProcessHits(G4Step* aStep,G4TouchableHistory*)
 
 
 void SensitiveDetector::EndOfEvent(G4HCofThisEvent*){
-	G4cout << "There were " << outRecI << " electrons outside the rectangle in this event.\n";
-	G4cout << "The last one was " << outRecS << G4endl;
-	G4cout << "From these, " << isPhot << " were phot processes\n";
+	//G4cout << "There were " << outRecI << " electrons outside the rectangle in this event.\n";
+	//G4cout << "The last one was " << outRecS << G4endl;
+	//G4cout << "From these, " << isPhot << " were phot processes\n";
 }

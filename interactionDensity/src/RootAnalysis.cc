@@ -18,13 +18,18 @@ static RootAnalysis* instance = 0;
 RootAnalysis::RootAnalysis()
 {
   fFile = new TFile("particles.root","RECREATE");
+  // TTree for primary X-ray electrons
   fTTree = new TTree("Particles","Tree that contains primary gamma electrons info");
+  // TTree for fluorescence X-ray electrons
   fluorElecTTree = new TTree("Fluorescence_electrons","Tree that contains fluorescence electrons info");
+  // TTree for fluorescence X-ray gammas
   fluorTTree = new TTree("Fluorescence_gammas","Tree that contains fluorescence gamma energy");
   
   //static HIT hit;
+  // storing electron's energy, position and direction
   fTTree->Branch("electron_branch", &electron, "energy/D:x/F:y/F:z/F:dx/F:dy/F:dz/F");
   fluorElecTTree->Branch("electron_branch", &fluoElectron, "energy/D:x/F:y/F:z/F:dx/F:dy/F:dz/F");
+  // storing gamma energy
   fluorTTree->Branch("fluor_branch", &fluorEnergy, "fluorEnergy/D");
 }
 

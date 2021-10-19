@@ -147,15 +147,17 @@ G4VPhysicalVolume* UserDetectorConstruction::Construct()
                           0,                        //copy number
                           true);                    //check overlaps
     
+    // THGEM placed at the center of coordinate system
     
     /* Dimensional parameters */
+    // external dimensions
     G4double internalEdge = 10.*cm;
     G4double driftThick = 0.9*cm;
     G4double inductionThick = 0.9*cm;
     G4double wallThick = 0.3*cm;
     G4double kaptonThick = 0.05*mm;
     G4double copperThick = 1.5*mm;
-    // thgem dimensions
+    // thgem thickness dimensions
     G4double thgem_up_copp = 0.001*cm;
     G4double thgem_down_copp = 0.001*cm;
     G4double thgem_kapt = 0.05*cm;
@@ -323,9 +325,9 @@ G4VPhysicalVolume* UserDetectorConstruction::Construct()
     //SetSensitiveDetector("Walls", aTrackerSD, true);
     //SetSensitiveDetector("KaptonUpperCover", aTrackerSD, true);
     //SetSensitiveDetector("CopperLowerCover", aTrackerSD, true);
-    SetSensitiveDetector("CopperUpperTGEM", aTrackerSD, true);
+    //SetSensitiveDetector("CopperUpperTGEM", aTrackerSD, true);
     //SetSensitiveDetector("KaptonMiddleLayer", aTrackerSD, true);
-    SetSensitiveDetector("CopperLowerTGEM", aTrackerSD, true);
+    //SetSensitiveDetector("CopperLowerTGEM", aTrackerSD, true);
     
     
     
