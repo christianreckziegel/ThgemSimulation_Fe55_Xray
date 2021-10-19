@@ -34,9 +34,11 @@ int main(int argc, char * argv[]) {
 
   int index = int(atoi(argv[1]));
   std::string strIndex = std::string(argv[1]);
-  int iniAvalanche = index*20;
-  int maxAvalanche = iniAvalanche+20;
-
+  int iniAvalanche = index*10;
+  int maxAvalanche = iniAvalanche+10;
+  
+  cout << "Avalanches from " << iniAvalanche << " to " << maxAvalanche << endl;
+  
   //int monoEnergy = int(atoi(argv[2]));
   //std::string strEnergy = std::string(argv[2]);
   std::string strEnergy = "_UpTo6";
@@ -101,18 +103,18 @@ int main(int argc, char * argv[]) {
   //viewDrift->SetArea(-15., -15., -10., 15.,  15.,  10.); //(-1.5, -1.5, -0.45, 1.5,  1.5,  0.15)
   //aval->EnablePlotting(viewDrift);
 
-  TFile *inputFile = TFile::Open("ArParticles.root");
+  TFile *inputFile = TFile::Open("particlesFullSet.root");
   TTree* theTree = (TTree*) inputFile->Get("Fluorescence_electrons");
   TBranch* electron_branch = theTree->GetBranch("electron_branch");
   PARTICLE electron;
   electron_branch->SetAddress(&electron);
 
   int n_events = theTree->GetEntries();
-  if(n_events > maxAvalanche){
+  if(n_events < maxAvalanche){
   	maxAvalanche = n_events;
   }
   
-  double x0, y0, z0, xi, yi, zi, xa, ya, ea, x1, y1, z1, ti, t1, ei, e1;
+  double x0, y0, z0, xi, yi, zi, xa, ya, ea, x1, y1, z1, ti, t1, ei, e1, monoEnergy;
   int status, np;
 
   //TH2* multiplied_hist = new TH2D("h1","Electrons after multiplied", /* X-dimension */ 10, -1.5, 1.5, /* Y-dimension */ 10, -1.5, 1.5);
@@ -138,7 +140,8 @@ int main(int argc, char * argv[]) {
   resultTree->Branch("Avalanche_yi",&y0);
   resultTree->Branch("Avalanche_x",&xa);
   resultTree->Branch("Avalanche_y",&ya);
-  resultTree->Branch("Number_of_Electrons_endpoint",&np);
+  resultTree->Branch("Gain",&np);
+  resultTree->Branch("Primary_eletron_initial_energy",&monoEnergy);
 
   for (int i = iniAvalanche; i < maxAvalanche; i++) {
     theTree->GetEntry(i);
@@ -150,6 +153,7 @@ int main(int argc, char * argv[]) {
     x0=electron.x;
     y0=electron.y;
     //ei = 0.;
+    monoEnergy = electron.energy;
     ei = electron.energy;
     
     aval->AvalancheElectron(xi, yi, zi, 0., ei, electron.dx, electron.dy, electron.dz);

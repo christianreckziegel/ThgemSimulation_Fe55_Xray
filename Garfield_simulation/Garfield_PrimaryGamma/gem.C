@@ -108,7 +108,7 @@ int main(int argc, char * argv[]) {
   electron_branch->SetAddress(&electron);
 
   int n_events = theTree->GetEntries();
-  if(n_events > maxAvalanche){
+  if(n_events < maxAvalanche){
   	maxAvalanche = n_events;
   }
   

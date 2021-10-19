@@ -33,7 +33,7 @@ void lerResult(){
 	
 	int n_events = theTree->GetEntries();
 	int status, np, nEnd;
-	cout << "Há " << n_events << " entries(s).\n";
+	cout << "There are " << n_events << " entries(s).\n";
 	double maior = 0.;
 	
 	//creating arrays for the plot

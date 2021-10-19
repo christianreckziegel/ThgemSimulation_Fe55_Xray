@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --output=ArCO2_70-30_5.9+-0.05keV_%A.%a.out
+#SBATCH --output=FluorElectrons_5.9+-0.05keV_%A.%a.out
 #SBATCH --job-name=FluorGamma
 #SBATCH --ntasks=1
 #SBATCH --nodes=1
